@@ -1,0 +1,14 @@
+version: "3.2"
+
+services:
+    mongodb:
+        image: mongo:4.2.2-bionic
+        container_name: mongodb
+        environment:
+          MONGO_INITDB_ROOT_USERNAME: admin
+          MONGO_INITDB_ROOT_PASSWORD: admin
+        restart: unless-stopped
+        ports:
+            - 27018:27017
+        volumes:
+            - ./data:/data/db

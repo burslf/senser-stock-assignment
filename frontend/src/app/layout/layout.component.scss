@@ -1,0 +1,44 @@
+@import '../../styles.scss';
+
+.sidenav-container {
+    height: 100%;
+    width: 100%;
+    // position: relative;
+    margin: 0px !important;
+    .sidenav{
+        transition: width 200ms ease-out;
+        width: $collapsed-width;
+        &.expanded {
+            width: $expanded-width;
+        }
+        // &:hover {   
+        //     transition-delay: 0.5s;
+        //     width: $expanded-width;
+        // }
+    }
+
+    .sidenav-content {
+        transition: 200ms ease-out;
+        width: calc(100% - $collapsed-width);
+        left: $collapsed-width;
+        position: absolute;
+        margin: 0 !important;
+        // padding-left: 80px;
+        &.expanded {
+            left: $expanded-width;
+            width: calc(100% - $expanded-width);
+        }
+
+    }
+
+}
+
+@media screen and (max-width: 768px) {
+    .sidenav {
+        width: 250px !important;
+    }
+    .sidenav-content {
+        left: 0 !important;
+        width: 100% !important;
+    }
+}

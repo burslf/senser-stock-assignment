@@ -1,0 +1,14 @@
+<div class="flex flex-col items-center">
+    <div *ngIf="!userStocks" class="absolute h-full w-full flex items-center justify-center">
+        <mat-spinner></mat-spinner>
+    </div>
+
+    <div *ngIf="userStocks" class="flex flex-col items-center w-3/5">
+        <div class="flex justify-center items-center m-4">
+            <span class="mr-1">Hello,</span>
+            <span class="text-lg font-bold"> {{userStocks.name}} !</span>
+        </div>
+    </div>
+
+    
+</div>

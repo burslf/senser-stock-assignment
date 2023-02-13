@@ -1,0 +1,18 @@
+<div class="flex justify-center w-full">
+    <div *ngIf="!userTransactions" class="absolute flex w-full h-full items-center justify-center">
+      <mat-spinner></mat-spinner>
+    </div>
+    <table mat-table *ngIf="userTransactions" [dataSource]="userTransactions" class="mt-4 mat-elevation-z8 demo-table bg-secondary">
+        <ng-container *ngFor="let column of columns" [matColumnDef]="column.columnDef">
+          <th class="text-text-secondary" mat-header-cell *matHeaderCellDef>
+            {{column.header}}
+          </th>
+          <td class="text-text-secondary" mat-cell *matCellDef="let row">
+            {{column.cell(row)}}
+          </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+</div>

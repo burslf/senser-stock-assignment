@@ -1,0 +1,23 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import './theme.scss';
+
+// @import url('https://fonts.googleapis.com/css2?family=Questrial&family=Sora:wght@200;300;400;500&display=swap');
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0;
+}
+body * {
+  font-family: 'Questrial', sans-serif;
+}
+
+$collapsed-width: 65px;
+$expanded-width: 220px;
+$toolbar-height: 50px;

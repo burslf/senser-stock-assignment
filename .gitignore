@@ -1,0 +1,11 @@
+# Angular
+.angular
+
+# Node
+node_modules
+
+# Env variables
+.env
+
+# Mongo persistant data
+data/

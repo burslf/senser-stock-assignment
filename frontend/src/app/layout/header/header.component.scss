@@ -1,0 +1,14 @@
+@import '../../../styles.scss';
+
+.toolbar{
+    height: $toolbar-height !important;
+}
+
+.chevron-button {
+    transition: width 500ms ease-in-out;
+    transform: rotate(0deg);
+
+    &.rotated {
+        transform: rotate(180deg);
+    }
+}
