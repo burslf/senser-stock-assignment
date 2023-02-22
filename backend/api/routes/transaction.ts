@@ -7,7 +7,9 @@ import { ObjectId } from 'mongodb';
 
 const router = express.Router()
 
-router.post('/buysell', validateTransactionMiddleware, async (req: Request, res: Response) => {
+router.use('/buysell', validateTransactionMiddleware);
+
+router.post('/buysell', async (req: Request, res: Response) => {
     const {userId, symbol, action, quantity } = req.body;
 
     // Create a new transaction
